@@ -495,14 +495,14 @@ h1.hero-title em {
   min-height: 160px; /* fuerza altura mínima igual en los 3 */
 }
 .plan-card-collapsed-cta {
-  margin-top: auto; /* empuja el botón siempre al fondo del teaser */
-  padding-top: 20px;
+  margin-top: auto;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 12px 0 0;
   border-top: 0.5px solid var(--rule);
 }
-.plan-card.dark .plan-card-collapsed-cta { border-color: rgba(255,255,255,0.1); }
+.plan-card.dark .plan-card-collapsed-cta { border-top-color: rgba(255,255,255,0.15); }
 .collapsed-cta-label {
   font-size: 11px;
   font-weight: 500;
@@ -1251,13 +1251,15 @@ footer {
         <div class="section-rule"></div>
         <p class="sobre-lead">Soy asesor financiero independiente con base en Rosario. Trabajo con todo tipo de clientes — empleados, freelancers, propietarios y profesionales — sin importar el nivel de ingresos ni el monto inicial. No hay un mínimo para empezar a invertir con criterio.</p>
         <div class="sobre-body">
-          <p>Mi trabajo es diferente al de un asesor de banco o broker: no tengo cuotas de venta, no cobro comisiones por recomendarte un fondo en particular y no gano más si operás más. El modelo de flat fee mensual alinea mis incentivos con los tuyos: me conviene que crezcas, no que transacciones.</p>
           <p>Lo que busco es ser el interlocutor financiero de confianza que cualquier persona merece tener — alguien que entienda su situación particular y ayude a pensar con criterio, no solo a ejecutar operaciones.</p>
         </div>
         <div class="filosofia-block">
           <h3>Filosofía de inversión</h3>
           <p>Creo en carteras construidas con lógica, no con ruido. El objetivo central es la <strong>preservación del capital</strong>: primero no perder, después crecer. Para eso trabajo con estrategias claras y entendibles — sin productos opacos, sin promesas de rendimientos extraordinarios.</p>
           <p style="margin-top:12px;">Cada cartera se <strong>adapta al perfil y objetivos del cliente</strong>: no existe una solución universal. La construcción se basa en una buena locación de capital, gestión de riesgo explícita y el uso de ratios financieros para medir la eficiencia de cada posición. El resultado es un portafolio que el cliente comprende, y eso es parte del valor.</p>
+        </div>
+        <div class="sobre-body" style="margin-top:24px;">
+          <p>Mi trabajo es diferente al de la mayoría de los asesores: no cobro un porcentaje sobre tus activos bajo administración (AUM), que es el modelo estándar del sector. Trabajo con flat fee mensual fijo, lo que significa que mis honorarios no dependen del tamaño de tu cartera ni de cuánto operés. Eso alinea mis incentivos con los tuyos: me conviene que crezcas, no que transacciones.</p>
         </div>
       </div>
       <div class="principios reveal" style="transition-delay: 0.15s;">
@@ -1271,7 +1273,7 @@ footer {
           <div class="principio">
             <div class="principio-num">02</div>
             <div class="principio-title">Transparencia en precios</div>
-            <div class="principio-desc">Flat fee mensual publicado. Sin sorpresas, sin letras chicas, sin cobros por operación ocultos.</div>
+            <div class="principio-desc">Flat fee mensual publicado. Sin porcentaje sobre activos, sin cobros que crezcan con tu cartera.</div>
           </div>
           <div class="principio">
             <div class="principio-num">03</div>
@@ -1316,22 +1318,22 @@ footer {
             <p class="price-annual">$200/año · dos meses sin cargo</p>
           </div>
           <div class="plan-divider"></div>
-          <p class="feat-group">Portafolio</p>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Armado y diagnóstico inicial de cartera</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Análisis de cartera trimestral</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Recomendaciones con justificación escrita</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Rebalanceo trimestral si las condiciones lo ameritan</span></div>
-          <p class="feat-group">Soporte</p>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Consultas por WhatsApp · respuesta 48hs</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">1 consulta de decisión grande gratuita cada 6 meses</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Semáforo semanal de inversiones + resumen de la semana <span class="tag-inc">todos los viernes</span></span></div>
-          <p class="feat-group">Beneficios</p>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Newsletter de research <span class="tag-inc">incluido</span></span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">50% de descuento en servicios de consultoría por proyecto <span class="tag-inc">exclusivo</span></span></div>
-          <p class="feat-group">Herramientas</p>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Excel de gastos personales <span class="tag-inc">incluido</span></span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Excel de presupuesto familiar <span class="tag-inc">incluido</span></span></div>
-          <a href="#contacto" class="plan-cta-link" onclick="event.stopPropagation()">Consultar disponibilidad →</a>
+          <p class="feat-group">Cartera</p>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Armado de cartera inicial según perfil de riesgo y horizonte temporal</span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Primera reunión gratuita <span class="tag-inc">presencial u online</span></span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Análisis riguroso trimestral con métricas de la cartera</span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Recomendaciones de rebalanceo con justificación escrita</span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Recomendaciones de inversión según tu perfil de inversor</span></div>
+          <p class="feat-group">Canales de difusión</p>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Canal de Telegram — recomendaciones de activos e inversiones en tiempo real</span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Informe semanal de mercados y geopolítica <span class="tag-inc">todos los viernes</span></span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Semáforo de inversiones — resumen y perspectiva de la semana</span></div>
+          <p class="feat-group">Soporte individual</p>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Soporte por WhatsApp — respuesta en menos de 72hs</span></div>
+          <p class="feat-group">Incluido</p>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">50% de descuento en consultoría puntual <span class="tag-inc">1 por mes</span></span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Plantilla Excel de gastos personales <span class="tag-inc">incluida</span></span></div>
+          <a href="#contacto" class="plan-cta-link" onclick="event.stopPropagation()">Agendar primera reunión →</a>
         </div>
       </div>
 
@@ -1353,21 +1355,22 @@ footer {
             <p class="price-annual">$400/año · dos meses sin cargo</p>
           </div>
           <div class="plan-divider"></div>
-          <p class="feat-group">Portafolio</p>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Todo lo del plan Entrada</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Revisión mensual del portafolio</span></div>
+          <p class="feat-group">Todo lo del plan Entrada, más:</p>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Armado de cartera según perfil de riesgo y horizonte temporal</span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Primera reunión gratuita <span class="tag-inc">presencial u online</span></span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Canal de Telegram + WhatsApp abierto 24/7 — respuesta en menos de 24hs <span class="tag-inc">sin límite de consultas</span></span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Informe semanal de mercados y geopolítica <span class="tag-inc">todos los viernes</span></span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">1 consultoría por proyecto mensual <span class="tag-inc">incluida</span></span></div>
+          <p class="feat-group">Seguimiento activo adicional</p>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Revisión mensual del portafolio con reporte de performance</span></div>
           <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Rebalanceos ante cualquier situación que lo amerite</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Reporte mensual de performance</span></div>
-          <p class="feat-group">Soporte</p>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Respuesta prioritaria en 24hs</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">2 consultas de decisión grande al mes</span></div>
           <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Morning review diario — qué está pasando en los mercados</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Semáforo semanal de inversiones + resumen de la semana <span class="tag-inc">todos los viernes</span></span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">2 consultas de decisión grande al mes</span></div>
           <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Research ampliado + estrategia de inversión <span class="tag-inc">incluido</span></span></div>
           <p class="feat-group">Herramientas</p>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Excels del plan Entrada</span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Todas las plantillas del plan Entrada</span></div>
           <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Excel de administración de propiedades <span class="tag-inc">incluido</span></span></div>
-          <a href="#contacto" class="plan-cta-link" onclick="event.stopPropagation()">Consultar disponibilidad →</a>
+          <a href="#contacto" class="plan-cta-link" onclick="event.stopPropagation()">Agendar primera reunión →</a>
         </div>
       </div>
 
@@ -1388,25 +1391,23 @@ footer {
             <p class="price-annual">$800/año · dos meses sin cargo</p>
           </div>
           <div class="plan-divider"></div>
-          <p class="feat-group">Portafolio</p>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Todo lo del plan Crecimiento, incluyendo rebalanceos ante cualquier situación</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Reunión mensual (video o presencial)</span></div>
+          <p class="feat-group">Todo lo del plan Crecimiento, más:</p>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Revisión mensual, morning review diario e informe semanal</span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Research ampliado + todas las herramientas incluidas</span></div>
+          <p class="feat-group">Planificación integral adicional</p>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Reunión mensual (video o presencial en Rosario)</span></div>
           <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Planificación financiera integral</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Análisis de créditos e hipotecas</span></div>
-          <p class="feat-group">Soporte</p>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Acceso directo y prioritario</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Consultas de decisión grande ilimitadas</span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">2 consultorías por proyecto mensual <span class="tag-inc">incluidas</span></span></div>
           <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Alerta temprana diaria — eventos del día y cómo afectan tus tenencias</span></div>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Semáforo semanal de inversiones + resumen de la semana <span class="tag-inc">todos los viernes</span></span></div>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Consultas de decisión grande ilimitadas</span></div>
           <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Research personalizado on demand</span></div>
           <p class="feat-group">Exclusivo Premium</p>
           <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Revisión anual de patrimonio neto completo (activos, pasivos y seguros)</span></div>
           <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Simulador de retiro personalizado — cuándo y con qué podés retirarte</span></div>
           <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Alertas proactivas ante eventos macro que impacten tu cartera</span></div>
           <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Acceso prioritario a nuevas herramientas y productos <span class="tag-inc">antes que nadie</span></span></div>
-          <p class="feat-group">Herramientas</p>
-          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Todas las herramientas disponibles</span></div>
-          <a href="#contacto" class="plan-cta-link" onclick="event.stopPropagation()">Consultar disponibilidad →</a>
+          <div class="feat-item"><span class="feat-dot"></span><span class="feat-text">Excel personalizado a medida según tu situación financiera <span class="tag-inc">exclusivo</span></span></div>
+          <a href="#contacto" class="plan-cta-link" onclick="event.stopPropagation()">Agendar primera reunión →</a>
         </div>
       </div>
     </div>
@@ -1474,20 +1475,20 @@ footer {
     <div class="research-options reveal" style="transition-delay:0.1s;">
       <div class="research-opt">
         <p class="ro-badge">Acceso gratuito</p>
-        <p class="ro-name">Edición mensual</p>
-        <p class="ro-desc">Un análisis profundo por mes. Disponible para cualquier suscriptor sin costo.</p>
+        <p class="ro-name">Substack de FDW Capital</p>
+        <p class="ro-desc">Research y análisis publicados gratuitamente. Seguí el newsletter sin costo desde Substack.</p>
         <p class="ro-price">Sin cargo</p>
       </div>
       <div class="research-opt">
         <p class="ro-badge">Suscripción independiente</p>
-        <p class="ro-name">Edición semanal</p>
-        <p class="ro-desc">Para quienes no son clientes de plan pero quieren el análisis completo y frecuente.</p>
-        <p class="ro-price">$10–15/mes</p>
+        <p class="ro-name">Informe semanal completo</p>
+        <p class="ro-desc">Análisis semanal completo de mercados y geopolítica + semáforo de inversiones. Para quienes no son clientes de plan.</p>
+        <p class="ro-price">$10/mes</p>
       </div>
       <div class="research-opt">
-        <p class="ro-badge">Incluido en planes</p>
-        <p class="ro-name">Crecimiento y Premium</p>
-        <p class="ro-desc">Acceso completo al newsletter como beneficio del plan. Sin costo adicional.</p>
+        <p class="ro-badge">Incluido en todos los planes</p>
+        <p class="ro-name">Entrada, Crecimiento y Premium</p>
+        <p class="ro-desc">El informe semanal y el semáforo de inversiones están incluidos en todos los planes activos. Sin costo adicional.</p>
         <p class="ro-price" style="color:var(--gold-lt);">Incluido</p>
       </div>
     </div>
@@ -1543,9 +1544,9 @@ footer {
       <div class="tool-card">
         <span class="tool-num">02</span>
         <div>
-          <p class="tool-name">Excel de presupuesto familiar</p>
-          <p class="tool-desc">Planificación de objetivos de ahorro e inversión mensual. Permite proyectar en cuánto tiempo alcanzás una meta financiera según distintos escenarios de ahorro.</p>
-          <span class="tool-tier">Todos los planes</span>
+          <p class="tool-name">Excel personalizado a medida</p>
+          <p class="tool-desc">Plantilla diseñada específicamente para la situación financiera del cliente: estructura de ingresos, objetivos, activos y seguimiento patrimonial. Único por cliente.</p>
+          <span class="tool-tier">Plan Premium</span>
         </div>
       </div>
       <div class="tool-card">
@@ -1613,7 +1614,7 @@ footer {
         <p class="broker-body">Para ejecutar las estrategias de inversión trabajamos con <strong>Balanz</strong>, uno de los brokers más sólidos y regulados de Argentina. La cuenta es tuya, está a tu nombre, y la apertura es gratuita y 100% digital.</p>
         <p class="broker-body">Mi rol es asesorarte: analizar, recomendar y acompañar cada decisión. La operación final siempre la ejecutás vos, con tu propia cuenta. Eso significa que en ningún momento tengo acceso o control sobre tus fondos.</p>
         <div class="broker-disclaimer">
-          Este modelo garantiza transparencia absoluta: yo cobro una tarifa fija por el asesoramiento, no una comisión sobre las operaciones. Balanz cobra sus comisiones de brokerage de forma directa y separada, sin intermediación mía.
+          Este modelo garantiza transparencia absoluta: yo cobro un flat fee mensual fijo por el asesoramiento, independientemente del tamaño de tu cartera. A diferencia del modelo estándar del sector, no cobro un porcentaje sobre tus activos bajo administración (AUM). Balanz cobra sus comisiones de brokerage de forma directa y separada, sin intermediación mía.
         </div>
       </div>
     </div>
